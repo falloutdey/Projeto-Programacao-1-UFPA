@@ -1,11 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 
-urls = ['https://www.cnnbrasil.com.br/tudo-sobre/violencia-contra-a-mulher/', 'https://www12.senado.leg.br/institucional/datasenado/publicacoesportema?tema=Mulher'] #Sites que serão minerados
+urls = ['https://www.cnnbrasil.com.br/tudo-sobre/violencia-contra-a-mulher/',] #Sites que serão minerados
 
 palavras_chaves = ['mulheres', 'violencia-domestica', 'mulher', 'Mulheres', 'Feminicídio'] #palavras_chaves que serão utilizadas para filtrar as noticias
 
-def get_soup(urls):
+def objeto_soup(urls):
     import requests
     from bs4 import BeautifulSoup
     """Função reponsável por realizar um request GET ao site e criar um objeto bs4"""
@@ -23,7 +23,7 @@ def filtragem():
     lista_links = []
     for j in urls:
     #urls que serão mineradas
-        soup = get_soup(j)  #criação do objeto beautifulSoup
+        soup = objeto_soup(j)  #criação do objeto beautifulSoup
         for k in palavras_chaves:
             for link in soup.find_all('a'):
               try:
