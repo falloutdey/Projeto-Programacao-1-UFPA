@@ -1,5 +1,7 @@
 from bs4 import BeautifulSoup
+from urllib.request import urlopen
 import requests
+import re
 
 urls = ['https://www.cnnbrasil.com.br/tudo-sobre/violencia-contra-a-mulher/', 'https://www12.senado.leg.br/institucional/datasenado/publicacoesportema?tema=Mulher'] #Sites que serão minerados
 
@@ -34,8 +36,6 @@ links_filtrados = filtragem()
 print(*links_filtrados)
 
 ##############################################
-from urllib.request import urlopen
-from bs4 import BeautifulSoup
 
 #obter link das imagens dos sites filtrados
 
@@ -50,15 +50,19 @@ for img in images:
 
       
 #################################################
-from bs4 import BeautifulSoup
-from re import sub
 
-#obter o titulo das matérias filtradas
+# obter o titulo das matérias filtradas
 
-site = "https://www.cnnbrasil.com.br/politica/eleicao-2022-sera-a-1a-com-lei-de-combate-a-violencia-politica-contra-mulheres/ "
-html = urlopen(site)
-bs = BeautifulSoup(html, 'html.parser')
+site = ["https://www.cnnbrasil.com.br/politica/eleicao-2022-sera-a-1a-com-lei-de-combate-a-violencia-politica-contra-mulheres/ ", 'https://www.bbc.com/portuguese/geral-63815180']
 
-tits = str(bs.find_all('h1'))
-tits = sub("<.>", "", tits)
-print(tits)
+for search in site:
+
+    html = urlopen(search)
+    bs = BeautifulSoup(html, 'html.parser')
+
+    tits = bs.find_all('h1')
+    for final in tits:
+        k = str(final)
+        pqp = re.search('(?<=>).+(?=<)', k)
+        pqp = str(pqp.group()).strip()
+        print(pqp)
