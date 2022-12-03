@@ -12,3 +12,16 @@ banco.commit()
 
 #cursor.execute("SELECT * FROM pessoas")
 #print(cursor.fetchall())
+
+#--adicionando ao banco de dados com variaveis--
+
+import sqlite3
+linksite = 'https://ewiedihjf.org/dl/'
+linkimg = 'testando.com/qualquercoisa-teste/'
+titulo = 'titulo_variavel'
+resumo = 'iwjdqio dhwuiqdh dhwuiqedhiqwhud'
+
+banco = sqlite3.connect('bancodata.db')
+cursor = banco.cursor()
+cursor.execute("INSERT INTO registros VALUES('"+linksite+"','"+linkimg+"','"+titulo+"','"+resumo+"')")
+banco.commit()
