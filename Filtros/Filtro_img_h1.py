@@ -61,8 +61,8 @@ for search in site:
     bs = BeautifulSoup(html, 'html.parser')
 
     tits = bs.find_all('h1')
-    for final in tits:
+    for final in title:
         k = str(final)
-        pqp = re.search('(?<=>).+(?=<)', k)
-        pqp = str(pqp.group()).strip()
-        print(pqp)
+        pp = re.search('(?<=>).+(?=<)', k)
+        pp = str(pp.group()).strip()
+        print(pp)
