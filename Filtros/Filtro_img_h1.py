@@ -60,7 +60,7 @@ for search in site:
     html = urlopen(search)
     bs = BeautifulSoup(html, 'html.parser')
 
-    tits = bs.find_all('h1')
+    title = bs.find_all('h1')
     for final in title:
         k = str(final)
         pp = re.search('(?<=>).+(?=<)', k)
