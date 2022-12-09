@@ -42,20 +42,21 @@
             </button>
             <span class="navbar-text" id="NavbarText">Violência contra Mulher</span>
         </div>
-        <button class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Clique para recarregar o escavador de notícias" id="botaoRefresh">
-            <i class="material-icons">refresh</i>Refresh
-        </button>
     </nav>
-    <form class="d-flex">
+    <form class="d-flex" method="POST">
+        {% csrf_token %}
         <input class="form-control form-control-lg" type="search" placeholder="Pesquisar" aria-label="Search" id="Input">
-        <button class="btn" type="submit"><i class="material-icons">search</i></button>
+        <button class="btn" type="submit" id="botaoForm">
+            <i class="material-icons" id="iconForm">search</i>
+        </button>
     </form>
 </body>
 
 </html>
 
-<!-- <form class="" method="POST">
-                {% csrf_token %}
-                <input class="form-control form-control-lg w-50" id="BuscaNoticias" type="text" name="Pesquisar">
-                <button class="btn" id="botao" type="submit">Buscar</button>
-            </form> -->
+        <!-- <div class="row">
+                    <button class="btn col" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Clique para recarregar o escavador de notícias" id="botaoRefresh">
+                        <i class="material-icons col" id="iconRefresh">refresh</i>Refresh
+                    </button>
+                </div>
