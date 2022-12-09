@@ -1,3 +1,4 @@
+/* Configurações Gerais e Body */
 *{
     margin: 0;
     padding: 0;
@@ -7,22 +8,23 @@ body{
     background-color: #E9F3FB;
 }
 
+/* Barra de Navegação */
 nav{
     background-color: #C3AED9;
-    font-family: montserrat;
     font-weight: 600;
 }
 
-span{
+nav, #menuHeader, #menuBody{
+    font-family: montserrat;
+}
+
+#NavbarText{
     font-size: 30px;
-    padding: 40px;
+    padding-left: 20px;
+    color: #3f1651;
 }
 
-.nav-link{
-    text-decoration: none;
-    color: #000000;
-}
-
+/* Buscador */
 form{
     margin: 40px;
     justify-content: center;
@@ -46,36 +48,54 @@ hr{
     border-top: 3px solid black;
 }
 
-/* body{
-    background-color: #E9F3FB;
+/* Offcanvas */
+#menu{
+    background-color: #9c3587;
 }
 
-.navbar{
-    background-color: #C3AED9;
-    font-family: montserrat;
-    font-weight: 600;
-} */
-/* 
-h3{
-    margin-left: 30px;
-    font-family: montserrat;
-    font-weight: 600;
-}
-
-.col{
-    list-style-type: none;
-    display: flex;
-    justify-content: end;
-    gap: 15px;
-    padding-right: 40px;
-    padding-top: 5px;
-}
-
-a{
+#Sobre, #Gerenciador{
     text-decoration: none;
-    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px;
 }
 
-a:hover{
-    color: green;
-} */
+#Sobre:hover, #Gerenciador:hover{
+    text-decoration: underline;
+}
+
+#iconMenu{
+    padding-top: 7px;
+    font-size: 30px;
+    color: #3f1651;
+}
+
+#botaoMenu{
+    background-color: #C3AED9;
+    margin-left: 15px;
+}
+
+#botaoMenu:hover{
+    background-color: #a47dba; 
+}
+
+#botaoSair{
+    font-size: 20px;
+    color: #FFFFFF !important;
+}
+
+#menuBody{
+    padding-top: 0;
+}
+
+#menuHeader{
+    padding-bottom: 0;
+}
+
+#MenuTitulo{
+    font-weight: 600;
+}
+
+#MenuTitulo, #Sobre, #Gerenciador{
+    color: #FFFFFF;
+}
