@@ -13,15 +13,25 @@ nav {
     font-weight: 600;
 }
 
-span {
+#NavText {
     font-size: 30px;
+    color: #3f1651;
 }
 
 #icon{
     padding-top: 10px;
     font-size: 30px;
+    color: #3f1651;
 }
 
-#icon, span{
+span{
     margin-left: 20px;
+}
+
+#botaoVoltar{
+    margin-left: 15px;
+}
+
+#botaoVoltar:hover{
+    background-color: #a47dba;
 }
