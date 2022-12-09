@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #E9F3FB;
+}
+
+nav {
+    background-color: #C3AED9;
+    font-family: montserrat;
+    font-weight: 600;
+}
+
+span {
+    font-size: 30px;
+}
+
+#icon{
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+#icon, span{
+    margin-left: 20px;
+}
