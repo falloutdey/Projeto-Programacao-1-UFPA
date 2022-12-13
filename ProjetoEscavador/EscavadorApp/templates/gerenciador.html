@@ -32,11 +32,33 @@
                 <span class="navbar-text" id="NavText">Gerenciador de Fontes</span>
         </div>
     </nav>
-    <div class="container-fluid d-flex justify-content-center">
+    <div class="container-md" id="containerBody">
+        <form class="d-flex" method="POST">
+            {% csrf_token %}
+            <input class="form-control form-control-lg" type="url" placeholder="URL da Fonte" aria-label="Add" id="InputAdicionar">
+            <button class="btn" type="submit" id="botaoAdd">Adicionar</button>
+        </form>
+        <div class="container-md" id="containerFontes">
         {% for fontes in urls %}
-        <a href="{{fontes}}">Link da notícia</a>
+                <form class="del d-flex justify-content-between" method="POST">
+                    {% csrf_token %}
+                    <a href="{{fontes}}" class="d-flex align-items-center">{{fontes}}</a>
+                    <button class="btn btn-danger ml-1" type="submit" name="id">
+                        <i class="material-icons">delete_forever</i>
+                    </button>
+                </form>
+                <br>
         {% endfor %}
+        <!-- <button class="btn btn-danger" type="submit" id="BotaoApagar">
+            <i class="material-icons">delete_forever</i>
+        </button>         -->
+        </div>
     </div>
 </body>
 
 </html>
+
+
+<!-- {% for fontes in urls %}
+        <a href="{{fontes}}">Link da notícia</a>
+        {% endfor %} -->
