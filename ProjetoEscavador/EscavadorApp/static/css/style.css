@@ -130,3 +130,11 @@ form{
 #MenuTitulo, #Sobre, #Gerenciador{
     color: #FFFFFF;
 }
+
+/* Body */
+
+#ContainerLink{
+    height: auto;
+    margin-top: 30px;
+    border: solid 1px;
+}

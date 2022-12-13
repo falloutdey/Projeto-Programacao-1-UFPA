@@ -50,13 +50,11 @@
             <i class="material-icons" id="iconForm">search</i>
         </button>
     </form>
+    <div class="container-md" id="containerLink">
+        {% for filtro in filtragem %}
+        <h4>{{filtro}}</h4>
+        {% endfor %}
+    </div>
 </body>
 
 </html>
-
-        <!-- <div class="row">
-                    <button class="btn col" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                        title="Clique para recarregar o escavador de notícias" id="botaoRefresh">
-                        <i class="material-icons col" id="iconRefresh">refresh</i>Refresh
-                    </button>
-                </div>
