@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 urls = ['https://www.cnnbrasil.com.br/tudo-sobre/violencia-contra-a-mulher/',] #Sites que serão minerados
 
-palavras_chaves = ['mulheres', 'violencia-domestica', 'mulher', 'Mulheres', 'Feminicídio'] #palavras_chaves que serão utilizadas para filtrar as noticias
+palavras_chaves = ['mulheres', 'violencia-domestica', 'mulher', 'Mulheres', 'Feminicidio', 'feminicidio', 'estupro', 'Estrupro', 'estrupada', 'Estrupada'] #palavras_chaves que serão utilizadas para filtrar as noticias
 
 def objeto_soup(urls):
     """Função reponsável por realizar um request GET ao site e criar um objeto bs4"""

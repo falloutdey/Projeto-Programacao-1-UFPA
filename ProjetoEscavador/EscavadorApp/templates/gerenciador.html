@@ -32,6 +32,11 @@
                 <span class="navbar-text" id="NavText">Gerenciador de Fontes</span>
         </div>
     </nav>
+    <div class="container-fluid d-flex justify-content-center">
+        {% for fontes in urls %}
+        <a href="{{fontes}}">Link da notícia</a>
+        {% endfor %}
+    </div>
 </body>
 
 </html>
