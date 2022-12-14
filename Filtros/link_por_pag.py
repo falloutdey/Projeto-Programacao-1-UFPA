@@ -50,8 +50,7 @@ print(links_filtrados)
 
 
 # Sites que serão minerados
-urls = ['https://www.cnnbrasil.com.br/tudo-sobre/violencia-contra-a-mulher/',
-        'https://www.bbc.com/portuguese/topics/ckdxnd3k619t']
+urls = ['https://www.cnnbrasil.com.br/tudo-sobre/violencia-contra-a-mulher/']
 
 # palavras_chaves que serão utilizadas para filtrar as noticias
 palavras_chaves = ['mulheres', 'violencia-domestica',

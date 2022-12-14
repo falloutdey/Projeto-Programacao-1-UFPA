@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-urls = ['https://www.cnnbrasil.com.br/tudo-sobre/violencia-contra-a-mulher/', 'https://www.bbc.com/portuguese/topics/ckdxnd3k619t']  # Sites que serão minerados
+urls = []  # Sites que serão minerados
 
 palavras_chaves = ['mulheres', 'violencia-domestica', 'mulher', 'Mulheres', 'Feminicidio', 'feminicidio', 'estupro', 'Estrupro', 'estrupada', 'Estrupada'] #palavras_chaves que serão utilizadas para filtrar as noticias
 

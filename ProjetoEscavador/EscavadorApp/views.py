@@ -7,6 +7,17 @@ def home(request):
     return render(request, 'index.html', {'filtragem': filtragem()})
 
 def gerenciador(request):
+    fontes = Fontes.objects.all()
     return render(request, 'gerenciador.html', {
-            'urls': urls,
+            'fontes': fontes,
     })
+
+def adicionar(request):
+    link = request.POST.get('nome_fonte')
+    Fontes.objects.create(fonte=link)
+    return redirect(gerenciador)
+
+def deletar(request, id):
+    link = Fontes.objects.get(id=id)
+    link.delete()
+    return redirect(gerenciador)

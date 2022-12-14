@@ -33,32 +33,32 @@
         </div>
     </nav>
     <div class="container-md" id="containerBody">
-        <form class="d-flex" method="POST">
+        <form class="d-flex" action="{% url 'adicionar' %}" method="POST">
             {% csrf_token %}
-            <input class="form-control form-control-lg" type="url" placeholder="URL da Fonte" aria-label="Add" id="InputAdicionar">
+            <input class="form-control form-control-lg" type="url" name="nome_fonte" placeholder="URL da Fonte" aria-label="Add" id="InputAdicionar">
             <button class="btn" type="submit" id="botaoAdd">Adicionar</button>
         </form>
         <div class="container-md" id="containerFontes">
-        {% for fontes in urls %}
-                <form class="del d-flex justify-content-between" method="POST">
-                    {% csrf_token %}
-                    <a href="{{fontes}}" class="d-flex align-items-center">{{fontes}}</a>
-                    <button class="btn btn-danger ml-1" type="submit" name="id">
-                        <i class="material-icons">delete_forever</i>
-                    </button>
-                </form>
-                <br>
-        {% endfor %}
-        <!-- <button class="btn btn-danger" type="submit" id="BotaoApagar">
-            <i class="material-icons">delete_forever</i>
-        </button>         -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" id="TabelaTexto">Fontes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        {% for link in fontes %}
+                            <form class="del d-flex"  action="{% url 'deletar' link.id %}"method="POST">
+                                {% csrf_token %}
+                                <td class="d-flex justify-content-between align-items-center"><a href="{{link.fonte}}" id="Link">{{link.fonte}}</a>
+                            <button class="btn btn-danger ml-1" type="submit" name="id" value="{{ link.id }}" id="BotaoDel">
+                                    <i class="material-icons d-flex justify-content-center align-items-center" id="DeleteIcon">delete_forever</i>
+                                </button></td>
+                            </form>
+                        {% endfor %}
+                    </tr>
         </div>
     </div>
 </body>
 
 </html>
-
-
-<!-- {% for fontes in urls %}
-        <a href="{{fontes}}">Link da notícia</a>
-        {% endfor %} -->

@@ -57,3 +57,19 @@ span{
     height: auto;
     margin-top: 30px;
 }
+
+#TabelaTexto{
+    font-size: 30px;
+}
+
+#Link{
+    font-size: 20px;
+}
+#BotaoDel{
+    font-size: 20px;
+}
+
+#DeleteIcon{
+    font-size: 28px;
+    height: 35px;
+}
