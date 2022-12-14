@@ -51,8 +51,8 @@
         </button>
     </form>
     <div class="container-md" id="containerLink">
-        {% for filtro in filtragem %}
-        <h4>{{filtro}}</h4>
+        {% for link in filtragem %}
+                <a href="{{ link }}">{{ link }}</a>
         {% endfor %}
     </div>
 </body>

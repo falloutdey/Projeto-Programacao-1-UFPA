@@ -7,3 +7,10 @@ class Fontes(models.Model):
 
     def __str__(self):
         return self.fonte
+
+class Escavador(models.Model):
+    link = models.CharField(max_length=500)
+    titulo = models.CharField(max_length=250)
+    
+    def __str__(self):
+        return self.link, self.titulo
